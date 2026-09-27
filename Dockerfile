@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Containerize the go application that we have created
 # This is the Dockerfile that we will use to build the image
 # and run the container
@@ -36,3 +37,28 @@ EXPOSE 8080
 
 # Command to run the application
 CMD ["./main"]
+=======
+FROM golang:1.25 as base
+
+WORKDIR /app
+
+COPY go.mod .
+
+RUN go mod download
+
+COPY . .
+
+RUN go build -o main .
+
+
+# Final stage - Distroless image
+FROM gcr.io/distroless/base
+
+COPY --from=base /app/main .
+
+COPY --from=base /app/static ./static
+
+EXPOSE 8080
+
+CMD [ "./main" ]
+>>>>>>> 7095e72 (Containerization)

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # This is a sample deployment manifest file for a simple web application.
+=======
+>>>>>>> 7095e72 (Containerization)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +20,13 @@ spec:
     spec:
       containers:
       - name: go-web-app
+<<<<<<< HEAD
         image: <docker-user-name>/go-web-app
         ports:
         - containerPort: 8080
+=======
+        image: hopenfaith/go-web-app
+        ports:
+        - containerPort: 8080
+    
+>>>>>>> 7095e72 (Containerization)

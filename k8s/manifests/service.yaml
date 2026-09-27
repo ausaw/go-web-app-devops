@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Service for the application
+=======
+>>>>>>> 7095e72 (Containerization)
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,6 +9,7 @@ metadata:
   labels:
     app: go-web-app
 spec:
+<<<<<<< HEAD
   ports:
   - port: 80
     targetPort: 8080
@@ -13,3 +17,12 @@ spec:
   selector:
     app: go-web-app
   type: ClusterIP
+=======
+ ports:
+ - port: 80
+   targetPort: 8080
+   protocol: TCP
+ selector:
+   app: go-web-app
+ type: ClusterIP
+>>>>>>> 7095e72 (Containerization)
