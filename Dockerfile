@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Containerize the go application that we have created
 # This is the Dockerfile that we will use to build the image
 # and run the container
@@ -61,4 +60,4 @@ COPY --from=base /app/static ./static
 EXPOSE 8080
 
 CMD [ "./main" ]
->>>>>>> 7095e72 (Containerization)
+
